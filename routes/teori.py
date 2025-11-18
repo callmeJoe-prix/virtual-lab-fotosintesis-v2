@@ -3,8 +3,19 @@ import pandas as pd
 
 st.title("Teori Fotosintesis")
 st.write("""
-Fotosintesis adalah proses biokimia vital yang dilakukan oleh tumbuhan hijau, alga, dan beberapa bakteri untuk mengubah
-energi cahaya menjadi energi kimia berupa glukosa.
+Kehidupan di Bumi secara fundamental bergantung pada energi yang berasal dari matahari. Fotosintesis merupakan satu-satunya
+proses yang memiliki signifikansi biologis yang mampu memanen energi tersebut. Sebagian besar sumber daya energi planet ini,
+baik yang baru (biomassa) maupun yang purba (bahan bakar fosil), merupakan hasil dari aktivitas fotosintetik. Secara harfiah,
+istilah fotosintesis berarti "sintesis menggunakan cahaya." Organisme fotosintetik memanfaatkan energi surya untuk menyintesis 
+senyawa karbon kompleks. Lebih spesifik, energi cahaya menggerakkan sintesis karbohidrat dan menghasilkan oksigen dari karbon
+dioksida dan air, sesuai dengan persamaan stoikiometri berikut:
+
+🌬️ **CO₂** + 💧 **H₂O** + ☀️ **Cahaya**  
+➡️ 🍬 **Glukosa** + 🌫️ **Oksigen (O₂)**
+
+
+Energi yang tersimpan dalam molekul karbohidrat ini kemudian dapat dimanfaatkan untuk mendukung berbagai proses seluler pada
+tumbuhan dan berfungsi sebagai sumber energi utama bagi semua bentuk kehidupan.
 """)
 
 # --- Video Penjelasan ---
