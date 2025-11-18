@@ -9,6 +9,7 @@ baik yang baru (biomassa) maupun yang purba (bahan bakar fosil), merupakan hasil
 istilah fotosintesis berarti "sintesis menggunakan cahaya." Organisme fotosintetik memanfaatkan energi surya untuk menyintesis 
 senyawa karbon kompleks. Lebih spesifik, energi cahaya menggerakkan sintesis karbohidrat dan menghasilkan oksigen dari karbon
 dioksida dan air, sesuai dengan persamaan stoikiometri berikut:
+""")
 
 st.subheader("Diagram Reaksi:")
     st.code(
@@ -20,7 +21,7 @@ CO₂ + H₂O + Cahaya
         language="text",
     )
 
-
+st.write("""
 Energi yang tersimpan dalam molekul karbohidrat ini kemudian dapat dimanfaatkan untuk mendukung berbagai proses seluler pada
 tumbuhan dan berfungsi sebagai sumber energi utama bagi semua bentuk kehidupan.
 """)
