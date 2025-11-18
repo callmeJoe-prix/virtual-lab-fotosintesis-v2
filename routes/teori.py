@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 
 st.title("Teori Fotosintesis")
+st.write("""
+Fotosintesis adalah proses biokimia vital yang dilakukan oleh tumbuhan hijau, alga, dan beberapa bakteri untuk mengubah
+energi cahaya menjadi energi kimia berupa glukosa.
+""")
 
 # --- Video Penjelasan ---
 st.subheader("🎥 Penjelasan Singkat Fotosintesis")
