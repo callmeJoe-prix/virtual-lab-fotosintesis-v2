@@ -10,8 +10,15 @@ istilah fotosintesis berarti "sintesis menggunakan cahaya." Organisme fotosintet
 senyawa karbon kompleks. Lebih spesifik, energi cahaya menggerakkan sintesis karbohidrat dan menghasilkan oksigen dari karbon
 dioksida dan air, sesuai dengan persamaan stoikiometri berikut:
 
-🌬️ **CO₂** + 💧 **H₂O** + ☀️ **Cahaya**  
-➡️ 🍬 **Glukosa** + 🌫️ **Oksigen (O₂)**
+st.subheader("Diagram Reaksi:")
+    st.code(
+        """
+CO₂ + H₂O + Cahaya
+        ↓
+    C₆H₁₂O₆ + O₂
+        """,
+        language="text",
+    )
 
 
 Energi yang tersimpan dalam molekul karbohidrat ini kemudian dapat dimanfaatkan untuk mendukung berbagai proses seluler pada
