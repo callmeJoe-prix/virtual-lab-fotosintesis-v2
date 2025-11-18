@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import get_localised_text, icons
+
 
 
 st.set_page_config(layout="wide")
