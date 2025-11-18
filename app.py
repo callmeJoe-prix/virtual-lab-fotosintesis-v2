@@ -1,26 +1,26 @@
 import streamlit as st
 
+# Konfigurasi dasar halaman
+st.set_page_config(
+    page_title="Virtual Lab Fotosintesis",
+    layout="wide",
+    page_icon="🌱"
+)
 
+# Navigasi halaman
+pg = st.navigation(
+    [
+        st.Page("routes/pendahuluan.py", title="Pendahuluan", icon="🏠"),
+        st.Page("routes/teori.py", title="Teori Fotosintesis", icon="📘"),
+        st.Page("routes/simulasi.py", title="Simulasi Interaktif", icon="🧪"),
+        st.Page("routes/kuis.py", title="Kuis", icon="❓"),
+    ]
+)
 
-st.set_page_config(layout="wide")
-
-
-st.session_state.setdefault("language", "English")
-
-
-
-pg = st.navigation([
-st.Page("pages/1_pendahuluan.py", title="Pendahuluan", icon=icons["house"]),
-st.Page("pages/2_teori.py", title="Teori Fotosintesis", icon=icons["books"]),
-st.Page("pages/3_simulasi.py", title="Simulasi Interaktif", icon=icons["bar_chart"]),
-st.Page("pages/4_kuis.py", title="Kuis", icon=icons["chart_with_upwards_trend"]),
-])
-
-
+# Sidebar
 with st.sidebar:
     st.write("## Pengaturan :gear:")
-
-st.selectbox("Bahasa", ["English", "Indonesian"], key="language")
-
+    st.write("Selamat datang di Virtual Lab Fotosintesis 👇")
+    st.write("- Gunakan menu di bawah untuk berpindah halaman.")
 
 pg.run()
