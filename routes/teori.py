@@ -67,3 +67,9 @@ st.write("""
 Fotosintesis adalah proses kompleks tetapi sangat penting...  
 (ditambah kesimpulan ringkas)
 """)
+
+df_light = pd.read_csv("assets/graphs/kurva_cahaya.csv")
+st.line_chart(df_light, x="Light", y="Rate")
+
+df_co2 = pd.read_csv("assets/graphs/grafik_co2.csv")
+st.line_chart(df_co2, x="CO2", y="Rate")
