@@ -11,20 +11,14 @@ senyawa karbon kompleks. Lebih spesifik, energi cahaya menggerakkan sintesis kar
 dioksida dan air, sesuai dengan persamaan stoikiometri berikut:
 """)
 
-st.subheader("Diagram Reaksi:")
-    st.code(
-        """
-CO₂ + H₂O + Cahaya
-        ↓
-    C₆H₁₂O₆ + O₂
-        """,
-        language="text",
-    )
-
-st.write("""
-Energi yang tersimpan dalam molekul karbohidrat ini kemudian dapat dimanfaatkan untuk mendukung berbagai proses seluler pada
-tumbuhan dan berfungsi sebagai sumber energi utama bagi semua bentuk kehidupan.
-""")
+# --- Tambahan: Tampilan Persamaan Reaksi Fotosintesis ---
+st.subheader("Persamaan Reaksi Fotosintesis")
+# Menggunakan st.latex untuk menampilkan persamaan kimia yang diformat dengan baik
+st.latex(
+    r"""
+    \text{6 CO}_2 + \text{6 H}_2\text{O} \xrightarrow[\text{Klorofil}]{\text{Energi Cahaya}} \text{C}_6\text{H}_{12}\text{O}_6 + \text{6 O}_2
+    """
+)
 
 # --- Video Penjelasan ---
 st.subheader("🎥 Penjelasan Singkat Fotosintesis")
