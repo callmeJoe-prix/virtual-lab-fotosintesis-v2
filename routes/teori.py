@@ -20,51 +20,6 @@ st.latex(
     """
 )
 
-st.markdown("""
-<div style='background-color: #f0f2f6; padding: 10px; border-radius: 5px; margin-bottom: 20px;'>
-    **Input:** 6 Karbon Dioksida ($\text{CO}_2$) + 6 Air ($\text{H}_2\text{O}$)
-    <br>
-    **Output:** Glukosa ($\text{C}_6\text{H}_{12}\text{O}_6$) + 6 Oksigen ($\text{O}_2$)
-</div>
-""", unsafe_allow_html=True)
-
-# --- 3. Hitung dan Tampilkan Hasil ---
-
-# Hitung hasil simulasi
-rate, oxygen, glucose = calculate_photosynthesis_rate(light_intensity, co2_concentration)
-
-# Tentukan Faktor Pembatas
-limiting_factor_name = ""
-if light_intensity < co2_concentration:
-    limiting_factor_name = "Intensitas Cahaya"
-    message_type = st.error
-    
-elif co2_concentration < light_intensity:
-    limiting_factor_name = "Konsentrasi CO₂"
-    message_type = st.error
-    
-else:
-    limiting_factor_name = "Keseimbangan Optimal"
-    message_type = st.info
-    
-# Tampilkan Hasil Utama
-st.subheader("Laju Reaksi dan Produk")
-
-col_rate, col_o2, col_glukosa = st.columns(3)
-
-with col_rate:
-    # Laju Reaksi
-    st.metric(label="Laju Fotosintesis Total", value=f"{rate:.2f} Unit/Jam", delta=None)
-
-with col_o2:
-    # Produksi Oksigen
-    st.metric(label="Produksi Oksigen ($\text{O}_2$)", value=f"{oxygen:.2f} Unit", delta=None)
-
-with col_glukosa:
-    # Produksi Glukosa
-    st.metric(label="Produksi Glukosa ($\text{C}_6\text{H}_{12}\text{O}_6$)", value=f"{glucose:.2f} Unit", delta=None)
-
-st.markdown("---")
 
 # --- Video Penjelasan ---
 st.subheader("🎥 Penjelasan Singkat Fotosintesis")
