@@ -20,6 +20,14 @@ st.latex(
     """
 )
 
+st.markdown("""
+<div style='background-color: #f0f2f6; padding: 10px; border-radius: 5px; margin-bottom: 20px;'>
+    **Input:** 6 Karbon Dioksida ($\text{CO}_2$) + 6 Air ($\text{H}_2\text{O}$)
+    <br>
+    **Output:** Glukosa ($\text{C}_6\text{H}_{12}\text{O}_6$) + 6 Oksigen ($\text{O}_2$)
+</div>
+""", unsafe_allow_html=True)
+
 # --- Video Penjelasan ---
 st.subheader("🎥 Penjelasan Singkat Fotosintesis")
 video_file = "assets/video/fotosintesis_intro.mp4"
