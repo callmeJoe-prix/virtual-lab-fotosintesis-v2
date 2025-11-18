@@ -5,7 +5,7 @@ import streamlit as st
 # Halaman Pendahuluan
 # ================================
 
-st.title("🌱 Virtual Lab Fotosintesis")
+st.title("🌱 Virtual Lab - Fotosintesis")
 st.markdown("---")
 
 st.header("📘 Selamat Datang")
@@ -66,6 +66,6 @@ st.write(
 # -------------------------------------------------------------------------
 st.info(
     "**Catatan:** Virtual Lab ini merupakan bagian dari inovasi pembelajaran "
-    "berbasis teknologi untuk mendukung pelaksanaan aktualisasi CPNS pada UIN Ar-Raniry."
+    "berbasis teknologi untuk mendukung pelaksanaan aktualisasi CPNS pada Prodi Biologi FST UIN Ar-Raniry Banda Aceh."
 )
 
