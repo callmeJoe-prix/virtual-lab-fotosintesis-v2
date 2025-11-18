@@ -18,7 +18,8 @@ st.Page("pages/4_kuis.py", title="Kuis", icon=icons["chart_with_upwards_trend"])
 
 
 with st.sidebar:
-st.write("## Pengaturan :gear:")
+    st.write("## Pengaturan :gear:")
+
 st.selectbox("Bahasa", ["English", "Indonesian"], key="language")
 
 
