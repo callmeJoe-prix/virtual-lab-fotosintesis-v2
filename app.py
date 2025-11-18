@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 
 st.session_state.setdefault("language", "English")
-text = get_localised_text("4Bio", st.session_state["language"])
+
 
 
 pg = st.navigation([
