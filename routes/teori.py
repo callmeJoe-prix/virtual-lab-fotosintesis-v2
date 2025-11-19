@@ -63,10 +63,9 @@ st.line_chart(df_light, x="Light", y="Rate")
 st.header("Siklus Calvin (Reaksi Gelap)")
 st.image("assets/images/calvin_cycle.png", caption="Siklus Calvin")
 st.write("""
-Detail tahapan:
-1. Karboksilasi  
-2. Reduksi  
-3. Regenerasi  
+Siklus Calvin, dinamai berdasarkan penemunya Melvin Calvin, merupakan sebuah siklus reaksi kimia dalam fotosintesis yang mengubah CO2 dan beberapa komponen 
+menjadi gliseraldehida 3-fosfat (G3P) dan akhirnya menjadi glukosa. Siklus ini tidak memerlukan cahaya (disebut juga reaksi gelap) dan berlangsung di stroma kloroplas.
+**Bagaimana cara kerja siklus Calvin?** ""Bagaimana cara kerja siklus Calvin?""
 """)
 
 # --- Faktor-Faktor yang Mempengaruhi ---
