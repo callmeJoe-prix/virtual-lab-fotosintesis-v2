@@ -111,17 +111,20 @@ denaturasi protein dan inaktivasi enzim yang terlibat, yang pada gilirannya meng
 st.header("Pigmen Fotosintetik")
 st.image("assets/images/pigment_spectrum.png", caption="Spektrum Pigmen")
 st.write("""
-- Klorofil a  
-- Klorofil b  
-- Karotenoid  
+Pigmen fotosintetik adalah molekul yang menyerap energi cahaya untuk fotosintesis, dan komponen utamanya termasuk klorofil (pigmen hijau) dan karotenoid (pigmen kuning dan jingga). 
+Ada juga pigmen lain seperti fukosantin pada alga dan bakteriofil pada bakteri. Mereka bekerja sama menyerap berbagai panjang gelombang cahaya dan mengubah energi foton menjadi energi kimia. 
 """)
 
 # --- Ringkasan & Kesimpulan ---
 st.markdown("---")
 st.subheader("Kesimpulan")
 st.write("""
-Fotosintesis adalah proses kompleks tetapi sangat penting...  
-(ditambah kesimpulan ringkas)
+Fotosintesis adalah proses biologis yang terjadi pada tumbuhan dan organisme autotrofik lainnya seperti bakteri, alga, dll. Dalam proses ini, organisme mengubah energi cahaya menjadi energi biokimia
+yang tersimpan dalam biomolekul seperti glukosa dan karbohidrat untuk kemudian digunakan dalam proses seluler. Fotosintesis diatur oleh banyak faktor, beberapa faktor penting meliputi sinar matahari, 
+karbon dioksida, air, dan suhu. Sinar matahari menyediakan energi yang diperlukan agar reaksi oksidoredukasi terjadi antara molekul air dan karbon dioksida. Intensitas cahaya menentukan laju fotosintesis. 
+Cahaya dengan intensitas tinggi diamati dengan laju fotosintesis yang lebih tinggi. Karbon dioksida dan air merupakan substrat utama untuk reaksi fotosintesis, dan ketersediaan optimalnya hanya dapat 
+menghasilkan produk akhir yang cukup, yaitu glukosa dan oksigen. Setiap proses biologis bekerja pada suhu optimal, sehingga fotosintesis juga bekerja paling baik pada kisaran suhu optimal. Semua faktor ini 
+harus berada pada nilai optimal untuk fotosintesis yang efisien.
 """)
 
 df_light = pd.read_csv("assets/graphs/kurva_cahaya.csv")
