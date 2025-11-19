@@ -92,14 +92,16 @@ st.header("Faktor-Faktor Pembatas Fotosintesis")
 st.image("assets/images/faktor_fotosintesis.png", caption="Faktor-faktor Pembatas Fotosintesis")
 st.write("""
 Deskripsi masing-masing faktor:
-**1. Intensitas cahaya**  
+**1. Intensitas cahaya**    
 Fotosintesis tidak terjadi tanpa adanya cahaya, sehingga tidak ada fotosintesis pada malam hari, melainkan hanya pada siang hari. Ada tiga atribut sinar matahari yang penting dalam fotosintesis,
 yaitu intensitas, kualitas, dan durasi paparan cahaya.
-**2. CO₂**  
+
+**2. CO₂**    
 Karbon dioksida sebagai molekul gas sangat sedikit di atmosfer, hanya 0,03% di antara gas-gas atmosfer lainnya. Hal ini menyebabkan ketersediaan dan kelangkaan CO2 untuk konsumsi tanaman berkurang, 
 sehingga menjadi faktor pembatas fotosintesis. Eksperimen menunjukkan bahwa peningkatan konsentrasi karbon dioksida menyebabkan peningkatan laju fotosintesis jika cahaya dan suhu bukan merupakan 
 faktor pembatas. Namun, CO2 mulai terakumulasi setelah batas tertentu dan memperlambat proses fotosintesis, bahkan mungkin menghambatnya.
-**3. Suhu**  
+
+**3. Suhu**    
 Semua proses biokimia dan biologi terjadi pada kisaran suhu optimum pada semua organisme hidup. Fotosintesis juga merupakan proses biologis, dan laju fotosintesis telah diamati meningkat pada 
 rentang suhu 6 hingga 37 derajat Celcius. Jaringan tanaman mati pada suhu 43 derajat Celcius, sehingga terjadi penurunan fotosintesis secara tiba-tiba. Suhu yang lebih tinggi juga menyebabkan 
 denaturasi protein dan inaktivasi enzim yang terlibat, yang pada gilirannya mengatur reaksi gelap enzimatik fotosintesis. Di atas 25-30 derajat Celcius, laju fotosintesis menurun.
