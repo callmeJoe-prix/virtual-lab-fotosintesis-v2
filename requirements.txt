@@ -3,16 +3,4 @@ numpy
 pandas
 matplotlib
 
-import streamlit as st
 
-st.markdown("""
-<style>
-.custom-title {
-    font-size: 36px;
-    color: #FF4B4B;
-    text-align: center;
-    font-family: 'Arial';
-}
-</style>
-<h1 class='custom-title'>Selamat Datang di Aplikasi Streamlit Saya</h1>
-""", unsafe_allow_html=True)
