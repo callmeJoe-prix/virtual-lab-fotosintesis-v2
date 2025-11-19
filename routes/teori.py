@@ -72,6 +72,10 @@ st.write("""
 1. Fiksasi CO2: CO2 diikat oleh RuBP (ribulosa 1,5-bisfosfat) dan diubah menjadi G3P (gliseraldehida 3-fosfat).
 2. Reduksi: G3P diubah menjadi PGA (asam fosfogliserat) dengan bantuan ATP dan NADPH2.
 3. Regenerasi: PGA diubah kembali menjadi RuBP agar siklus dapat terus berlangsung.
+
+**1. Fiksasi CO2**
+Proses dimulai ketika karbon dioksida (CO2) dari udara diambil dan diikat ke molekul karbon yang lebih besar, ribulosa bisfosfat (RuBP). Reaksi ini dimediasi oleh 
+enzim RuBisCO (ribulosa-1,5-bisfosfat karboksilase/oksigenase), yang menghasilkan dua molekul asam 3-fosfogliserat (3-PGA).
 """)
 
 # --- Faktor-Faktor yang Mempengaruhi ---
