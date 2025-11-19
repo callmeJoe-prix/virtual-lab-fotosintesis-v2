@@ -2,31 +2,14 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 def run():
-    st.title("🧪 Simulasi Interaktif (Mirip comphot-biotool)")
-    st.write("Grafik dan animasi akan berubah sesuai parameter di bawah.")
+    st.title("Tes Animasi HTML")
 
-    # Slider parameter
-    light = st.slider("Intensitas Cahaya", 0, 2000, 500)
-    co2 = st.slider("Konsentrasi CO₂", 0, 1200, 400)
+    st.write("Jika Anda melihat blok merah di bawah, berarti HTML sudah tampil.")
 
-    # Load HTML animation
-    with open("assets/animation.html", "r") as f:
-        animation_html = f.read()
+    html_code = """
+    <div style='width:300px;height:200px;background:red;'>
+        <h3 style='color:white;text-align:center;padding-top:60px;'>HTML OK</h3>
+    </div>
+    """
 
-    # tampilkan animasi
-    component = components.html(
-        animation_html,
-        height=450,
-        width=700,
-        scrolling=False,
-    )
-
-    # Kirim parameter slider → JS di HTML
-    components.html(f"""
-    <script>
-        window.parent.postMessage(
-            {{type: "update", light: {light}, co2: {co2}}},
-            "*"
-        );
-    </script>
-    """, height=0)
+    components.html(html_code, height=250)
