@@ -32,20 +32,26 @@ st.video(video_file)
 
 # --- Struktur Kloroplas ---
 st.header("Struktur Kloroplas")
-st.image("assets/images/kloroplas_diagram.png", caption="Diagram Kloroplas")
+st.image("assets/images/kloroplas_diagram.png", caption="Letak Kloroplas")
 st.image("assets/images/kloroplas.png", caption="Struktur Kloroplas")
 st.write("""
-Penjelasan bagian kloroplas:
-- Grana  
-- Tilakoid  
-- Stroma  
+Kloroplas pada tumbuhan tingkat tinggi dilingkupi oleh dua membran, yaitu membran dalam dan membran luar, yang secara kolektif disebut sebagai
+selubung (envelope). Wilayah kloroplas yang berada di dalam membran dalam dan mengelilingi membran tilakoid dikenal sebagai stroma.
+Stroma mengandung enzim yang bertanggung jawab untuk mengkatalisis fiksasi karbon dan jalur biosintetik lainnya. Membran tilakoid terlipat secara
+ekstensif dan dalam banyak visualisasi tampak tersusun bertumpuk seperti koin, yang disebut granum. Meskipun demikian, secara aktual, 
+membran tilakoid membentuk satu atau beberapa sistem membran besar yang saling terhubung, dengan interior dan eksterior yang terdefinisikan dengan 
+baik terhadap stroma. Struktur organisasi ini sangat penting dalam memfasilitasi proses penyimpanan energi fotosintetik.  
 """)
 
 # --- Reaksi Terang ---
 st.header("Reaksi Terang")
-st.image("assets/images/light_reaction.png", caption="Diagram Reaksi Terang")
+st.image("assets/images/light_reaction.png", caption="Reaksi Terang")
 st.write("""
-Penjelasan aliran elektron, fotolisis, ATP, NADPH, O₂.
+Skema Z adalah representasi skematis dari organisasi keseluruhan membran pada kloroplas. Penyerapan cahaya merah oleh Fotosistem II (PSII) menghasilkan 
+suatu oksidator kuat dan reduktan lemah. Sebaliknya, cahaya far-red yang diserap oleh Fotosistem I (PSI) menghasilkan suatu oksidator lemah dan reduktan kuat. 
+Oksidator kuat yang dihasilkan oleh PSII berfungsi untuk mengoksidasi air ($\text{H}_2\text{O}$), sementara reduktan kuat yang diproduksi oleh PSI 
+mereduksi $\text{NADP}^+$ menjadi $\text{NADPH}$. Pemahaman terhadap skema ini sangat mendasar bagi interpretasi transport elektron fotosintetik. 
+Istilah P680 dan P700 merujuk pada panjang gelombang serapan maksimum dari klorofil pusat reaksi yang masing-masing terdapat pada PSII dan PSI.
 """)
 
 # --- Grafik Respon Cahaya ---
