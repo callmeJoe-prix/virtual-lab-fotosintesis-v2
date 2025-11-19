@@ -49,8 +49,8 @@ st.image("assets/images/light_reaction.png", caption="Reaksi Terang")
 st.write("""
 Skema Z adalah representasi skematis dari organisasi keseluruhan membran pada kloroplas. Penyerapan cahaya merah oleh Fotosistem II (PSII) menghasilkan 
 suatu oksidator kuat dan reduktan lemah. Sebaliknya, cahaya far-red yang diserap oleh Fotosistem I (PSI) menghasilkan suatu oksidator lemah dan reduktan kuat. 
-Oksidator kuat yang dihasilkan oleh PSII berfungsi untuk mengoksidasi air {"formula": "H₂O"} ($\text{H}_2\text{O}$), sementara reduktan kuat yang diproduksi oleh PSI 
-mereduksi $\text{NADP}^+$ menjadi $\text{NADPH}$. Pemahaman terhadap skema ini sangat mendasar bagi interpretasi transport elektron fotosintetik. 
+Oksidator kuat yang dihasilkan oleh PSII berfungsi untuk mengoksidasi air (H₂O), sementara reduktan kuat yang diproduksi oleh PSI 
+mereduksi NADP⁺ menjadi NADPH. Pemahaman terhadap skema ini sangat mendasar bagi interpretasi transport elektron fotosintetik. 
 Istilah P680 dan P700 merujuk pada panjang gelombang serapan maksimum dari klorofil pusat reaksi yang masing-masing terdapat pada PSII dan PSI.
 """)
 
