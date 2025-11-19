@@ -1,15 +1,24 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
-def run():
-    st.title("Tes Animasi HTML")
+st.set_page_config(
+    page_title="Virtual Lab Fotosintesis",
+    layout="wide",
+    page_icon="🌱"
+)
 
-    st.write("Jika Anda melihat blok merah di bawah, berarti HTML sudah tampil.")
+# Navigasi halaman
+pg = st.navigation(
+    [
+        st.Page("routes/pendahuluan.py", title="Pendahuluan", icon="🏠"),
+        st.Page("routes/teori.py", title="Teori Fotosintesis", icon="📘"),
+        st.Page("routes/simulasi.py", title="Simulasi Interaktif", icon="🧪"),
+        st.Page("routes/kuis.py", title="Kuis", icon="❓"),
+    ]
+)
 
-    html_code = """
-    <div style='width:300px;height:200px;background:red;'>
-        <h3 style='color:white;text-align:center;padding-top:60px;'>HTML OK</h3>
-    </div>
-    """
+# Sidebar
+with st.sidebar:
+    st.write("## Menu :gear:")
+    st.write("Gunakan menu di atas untuk berpindah halaman.")
 
-    components.html(html_code, height=250)
+pg.run()
