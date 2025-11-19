@@ -73,9 +73,15 @@ st.write("""
 2. Reduksi: G3P diubah menjadi PGA (asam fosfogliserat) dengan bantuan ATP dan NADPH2.
 3. Regenerasi: PGA diubah kembali menjadi RuBP agar siklus dapat terus berlangsung.
 
-**1. Fiksasi CO2**
-Proses dimulai ketika karbon dioksida (CO2) dari udara diambil dan diikat ke molekul karbon yang lebih besar, ribulosa bisfosfat (RuBP). Reaksi ini dimediasi oleh 
+**1. Fiksasi CO2:** Proses dimulai ketika karbon dioksida (CO2) dari udara diambil dan diikat ke molekul karbon yang lebih besar, ribulosa bisfosfat (RuBP). Reaksi ini dimediasi oleh 
 enzim RuBisCO (ribulosa-1,5-bisfosfat karboksilase/oksigenase), yang menghasilkan dua molekul asam 3-fosfogliserat (3-PGA).
+
+**2. Reduksi:** Selanjutnya, molekul 3-PGA diubah menjadi molekul gliseraldehida-3-fosfat (G3P) melalui serangkaian reaksi redoks. Proses ini melibatkan konsumsi energi dari ATP 
+(adenosin trifosfat) dan pengurangan NADPH (nikotinamida adenin dinukleotida fosfat) yang dihasilkan selama tahap terang fotosintesis.
+
+**3. Regenerasi:** Sebagian G3P yang dihasilkan dari tahap sebelumnya digunakan untuk meregenerasi RuBP. Tahap ini penting karena RuBP diperlukan kembali untuk fiksasi karbon baru. 
+Proses regenerasi RuBP melibatkan beberapa langkah dan membutuhkan energi ATP yang dihasilkan selama tahap terang fotosintesis. Setelah tahapan-tahapan ini selesai, siklus Calvin akan 
+kembali ke titik awal dan dapat terus berulang untuk menghasilkan lebih banyak G3P, yang selanjutnya digunakan untuk membangun karbohidrat seperti glukosa.
 """)
 
 # --- Faktor-Faktor yang Mempengaruhi ---
