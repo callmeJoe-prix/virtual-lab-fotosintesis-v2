@@ -1,27 +1,24 @@
 import streamlit as st
 
-st.set_page_config(page_title="Virtual Lab Fotosintesis", layout="wide")
-
-# Sistem Navigasi Manual (PALING STABIL)
-st.sidebar.title("📘 Navigasi")
-page = st.sidebar.radio(
-    "Pilih Halaman:",
-    ["Pendahuluan", "Teori", "Simulasi", "Kuis"]
+st.set_page_config(
+    page_title="Virtual Lab Fotosintesis",
+    layout="wide",
+    page_icon="🌱"
 )
 
-# Impor file halaman
-if page == "Pendahuluan":
-    from routes.pendahuluan import run
-    run()
+# Navigasi halaman
+pg = st.navigation(
+    [
+        st.Page("routes/pendahuluan.py", title="Pendahuluan", icon="🏠"),
+        st.Page("routes/teori.py", title="Teori Fotosintesis", icon="📘"),
+        st.Page("routes/simulasi.py", title="Simulasi Interaktif", icon="🧪"),
+        st.Page("routes/kuis.py", title="Kuis", icon="❓"),
+    ]
+)
 
-elif page == "Teori":
-    from routes.teori import run
-    run()
+# Sidebar
+with st.sidebar:
+    st.write("## Menu :gear:")
+    st.write("Gunakan menu di atas untuk berpindah halaman.")
 
-elif page == "Simulasi":
-    from routes.simulasi import run
-    run()
-
-elif page == "Kuis":
-    from routes.kuis import run
-    run()
+pg.run()
