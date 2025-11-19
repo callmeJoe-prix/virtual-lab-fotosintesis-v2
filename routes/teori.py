@@ -90,7 +90,7 @@ st.image("assets/images/faktor_fotosintesis.png", caption="Faktor-faktor Pembata
 st.write("""
 Deskripsi masing-masing faktor:
 - **1. Intensitas cahaya**
-- Fotosintesis tidak terjadi tanpa adanya cahaya, sehingga tidak ada fotosintesis pada malam hari, melainkan hanya pada siang hari. Ada tiga atribut sinar matahari yang penting dalam fotosintesis,
+    Fotosintesis tidak terjadi tanpa adanya cahaya, sehingga tidak ada fotosintesis pada malam hari, melainkan hanya pada siang hari. Ada tiga atribut sinar matahari yang penting dalam fotosintesis,
 yaitu intensitas, kualitas, dan durasi paparan cahaya.
 **2. CO₂**
 Karbon dioksida sebagai molekul gas sangat sedikit di atmosfer, hanya 0,03% di antara gas-gas atmosfer lainnya. Hal ini menyebabkan ketersediaan dan kelangkaan CO2 untuk konsumsi tanaman berkurang, 
