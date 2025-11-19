@@ -115,6 +115,12 @@ Pigmen fotosintetik adalah molekul yang menyerap energi cahaya untuk fotosintesi
 Ada juga pigmen lain seperti fukosantin pada alga dan bakteriofil pada bakteri. Mereka bekerja sama menyerap berbagai panjang gelombang cahaya dan mengubah energi foton menjadi energi kimia. 
 """)
 
+df_light = pd.read_csv("assets/graphs/kurva_cahaya.csv")
+st.line_chart(df_light, x="Light", y="Rate")
+
+df_co2 = pd.read_csv("assets/graphs/grafik_co2.csv")
+st.line_chart(df_co2, x="CO2", y="Rate")
+
 # --- Ringkasan & Kesimpulan ---
 st.markdown("---")
 st.subheader("Kesimpulan")
@@ -127,8 +133,4 @@ menghasilkan produk akhir yang cukup, yaitu glukosa dan oksigen. Setiap proses b
 harus berada pada nilai optimal untuk fotosintesis yang efisien.
 """)
 
-df_light = pd.read_csv("assets/graphs/kurva_cahaya.csv")
-st.line_chart(df_light, x="Light", y="Rate")
 
-df_co2 = pd.read_csv("assets/graphs/grafik_co2.csv")
-st.line_chart(df_co2, x="CO2", y="Rate")
