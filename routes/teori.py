@@ -64,8 +64,14 @@ st.header("Siklus Calvin (Reaksi Gelap)")
 st.image("assets/images/calvin_cycle.png", caption="Siklus Calvin")
 st.write("""
 Siklus Calvin, dinamai berdasarkan penemunya Melvin Calvin, merupakan sebuah siklus reaksi kimia dalam fotosintesis yang mengubah CO2 dan beberapa komponen 
-menjadi gliseraldehida 3-fosfat (G3P) dan akhirnya menjadi glukosa. Siklus ini tidak memerlukan cahaya (disebut juga reaksi gelap) dan berlangsung di stroma kloroplas.
-**Bagaimana cara kerja siklus Calvin?** ""Bagaimana cara kerja siklus Calvin?""
+menjadi gliseraldehida 3-fosfat (G3P) dan akhirnya menjadi glukosa. Siklus ini tidak memerlukan cahaya (disebut juga reaksi gelap) dan berlangsung di stroma kloroplas. 
+""")
+
+st.header("**Bagaimana tahapan dan cara kerja siklus Calvin?**")
+st.write("""
+1. Fiksasi CO2: CO2 diikat oleh RuBP (ribulosa 1,5-bisfosfat) dan diubah menjadi G3P (gliseraldehida 3-fosfat).
+2. Reduksi: G3P diubah menjadi PGA (asam fosfogliserat) dengan bantuan ATP dan NADPH2.
+3. Regenerasi: PGA diubah kembali menjadi RuBP agar siklus dapat terus berlangsung.
 """)
 
 # --- Faktor-Faktor yang Mempengaruhi ---
