@@ -86,7 +86,7 @@ kembali ke titik awal dan dapat terus berulang untuk menghasilkan lebih banyak G
 
 # --- Faktor-Faktor yang Mempengaruhi ---
 st.header("Faktor-Faktor Pembatas Fotosintesis")
-st.image("assets/images/faktor_fotosintesis.png", caption="Faktor-faktor Fotosintesis")
+st.image("assets/images/faktor_fotosintesis.png", caption="Faktor-faktor Pembatas Fotosintesis")
 st.write("""
 Deskripsi masing-masing faktor:
 - Intensitas cahaya  
