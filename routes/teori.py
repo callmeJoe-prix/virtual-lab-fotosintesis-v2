@@ -73,13 +73,16 @@ st.write("""
 2. Reduksi: G3P diubah menjadi PGA (asam fosfogliserat) dengan bantuan ATP dan NADPH2.
 3. Regenerasi: PGA diubah kembali menjadi RuBP agar siklus dapat terus berlangsung.
 
-**1. Fiksasi CO2:** Proses dimulai ketika karbon dioksida (CO2) dari udara diambil dan diikat ke molekul karbon yang lebih besar, ribulosa bisfosfat (RuBP). Reaksi ini dimediasi oleh 
+**1. Fiksasi CO2:**  
+Proses dimulai ketika karbon dioksida (CO2) dari udara diambil dan diikat ke molekul karbon yang lebih besar, ribulosa bisfosfat (RuBP). Reaksi ini dimediasi oleh 
 enzim RuBisCO (ribulosa-1,5-bisfosfat karboksilase/oksigenase), yang menghasilkan dua molekul asam 3-fosfogliserat (3-PGA).
 
-**2. Reduksi:** Selanjutnya, molekul 3-PGA diubah menjadi molekul gliseraldehida-3-fosfat (G3P) melalui serangkaian reaksi redoks. Proses ini melibatkan konsumsi energi dari ATP 
+**2. Reduksi:**  
+Selanjutnya, molekul 3-PGA diubah menjadi molekul gliseraldehida-3-fosfat (G3P) melalui serangkaian reaksi redoks. Proses ini melibatkan konsumsi energi dari ATP 
 (adenosin trifosfat) dan pengurangan NADPH (nikotinamida adenin dinukleotida fosfat) yang dihasilkan selama tahap terang fotosintesis.
 
-**3. Regenerasi:** Sebagian G3P yang dihasilkan dari tahap sebelumnya digunakan untuk meregenerasi RuBP. Tahap ini penting karena RuBP diperlukan kembali untuk fiksasi karbon baru. 
+**3. Regenerasi:**  
+Sebagian G3P yang dihasilkan dari tahap sebelumnya digunakan untuk meregenerasi RuBP. Tahap ini penting karena RuBP diperlukan kembali untuk fiksasi karbon baru. 
 Proses regenerasi RuBP melibatkan beberapa langkah dan membutuhkan energi ATP yang dihasilkan selama tahap terang fotosintesis. Setelah tahapan-tahapan ini selesai, siklus Calvin akan 
 kembali ke titik awal dan dapat terus berulang untuk menghasilkan lebih banyak G3P, yang selanjutnya digunakan untuk membangun karbohidrat seperti glukosa.
 """)
@@ -89,14 +92,14 @@ st.header("Faktor-Faktor Pembatas Fotosintesis")
 st.image("assets/images/faktor_fotosintesis.png", caption="Faktor-faktor Pembatas Fotosintesis")
 st.write("""
 Deskripsi masing-masing faktor:
-- **1. Intensitas cahaya**  
+**1. Intensitas cahaya**  
 Fotosintesis tidak terjadi tanpa adanya cahaya, sehingga tidak ada fotosintesis pada malam hari, melainkan hanya pada siang hari. Ada tiga atribut sinar matahari yang penting dalam fotosintesis,
 yaitu intensitas, kualitas, dan durasi paparan cahaya.
-**2. CO₂**
+**2. CO₂**  
 Karbon dioksida sebagai molekul gas sangat sedikit di atmosfer, hanya 0,03% di antara gas-gas atmosfer lainnya. Hal ini menyebabkan ketersediaan dan kelangkaan CO2 untuk konsumsi tanaman berkurang, 
 sehingga menjadi faktor pembatas fotosintesis. Eksperimen menunjukkan bahwa peningkatan konsentrasi karbon dioksida menyebabkan peningkatan laju fotosintesis jika cahaya dan suhu bukan merupakan 
 faktor pembatas. Namun, CO2 mulai terakumulasi setelah batas tertentu dan memperlambat proses fotosintesis, bahkan mungkin menghambatnya.
-**3. Suhu**
+**3. Suhu**  
 Semua proses biokimia dan biologi terjadi pada kisaran suhu optimum pada semua organisme hidup. Fotosintesis juga merupakan proses biologis, dan laju fotosintesis telah diamati meningkat pada 
 rentang suhu 6 hingga 37 derajat Celcius. Jaringan tanaman mati pada suhu 43 derajat Celcius, sehingga terjadi penurunan fotosintesis secara tiba-tiba. Suhu yang lebih tinggi juga menyebabkan 
 denaturasi protein dan inaktivasi enzim yang terlibat, yang pada gilirannya mengatur reaksi gelap enzimatik fotosintesis. Di atas 25-30 derajat Celcius, laju fotosintesis menurun.
