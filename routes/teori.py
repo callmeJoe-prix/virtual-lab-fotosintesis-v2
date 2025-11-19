@@ -20,6 +20,10 @@ st.latex(
     """
 )
 
+st.write("""
+Energi yang tersimpan dalam molekul karbohidrat ini kemudian dapat dimanfaatkan untuk mendukung berbagai proses seluler pada tumbuhan dan
+berfungsi sebagai sumber energi utama bagi semua bentuk kehidupan.
+""")
 
 # --- Video Penjelasan ---
 st.subheader("🎥 Penjelasan Singkat Fotosintesis")
