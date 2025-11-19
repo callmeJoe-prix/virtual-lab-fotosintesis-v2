@@ -33,6 +33,7 @@ st.video(video_file)
 # --- Struktur Kloroplas ---
 st.header("Struktur Kloroplas")
 st.image("assets/images/kloroplas_diagram.png", caption="Diagram Kloroplas")
+st.image("assets/images/kloroplas.png", caption="Struktur Kloroplas")
 st.write("""
 Penjelasan bagian kloroplas:
 - Grana  
