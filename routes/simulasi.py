@@ -5,6 +5,14 @@ from models.simulation_engine import run_simulation
 
 st.write("DEBUG: simulasi.py loaded")
 
+# Test impor model
+try:
+    from models.simulation_engine import run_simulation
+    st.write("DEBUG: import simulation_engine OK")
+except Exception as e:
+    st.error(f"DEBUG: import error → {e}")
+
+
 def run():
     st.title("🔬 Simulasi In Silico Fotosintesis")
     st.write("Atur parameter di panel kiri lalu tekan **Start the simulation**.")
