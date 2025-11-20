@@ -1,80 +1,82 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 
-st.title("🧪 Simulasi Interaktif Fotosintesis")
-st.write("Pada halaman ini, Anda dapat mensimulasikan pengaruh faktor lingkungan terhadap laju fotosintesis.")
+st.set_page_config(layout="wide")
 
-st.write("---")
+# ---- CSS untuk membuat slider gaya comphot-biotool ----
+st.markdown("""
+<style>
+/* Warna teks slider */
+.css-1emrehy edgvbvh3 {
+    color: red !important;
+}
 
-# ================================
-# 1. Panel Pengaturan Variabel
-# ================================
-st.sidebar.header("🔧 Pengaturan Eksperimen")
+/* Warna slider */
+.stSlider > div[data-baseweb="slider"] > div > div {
+    background: #ff4b4b !important;
+}
 
-light = st.sidebar.slider("Intensitas Cahaya (µmol m⁻² s⁻¹)", 0, 2000, 500)
-co2 = st.sidebar.slider("Konsentrasi CO₂ (ppm)", 0, 2000, 400)
-temp = st.sidebar.slider("Suhu (°C)", 0, 50, 25)
-chlorophyll = st.sidebar.selectbox(
-    "Jenis Daun (Jumlah Klorofil)",
-    ["Rendah", "Sedang", "Tinggi"]
-)
+/* Background tema gelap */
+.block-container {
+    background-color: #111111;
+    padding: 2rem;
+    border-radius: 12px;
+}
 
-st.sidebar.write("---")
-st.sidebar.write("Tekan tombol di bawah untuk menjalankan simulasi.")
+/* Tombol */
+div.stButton > button {
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 18px;
+}
+</style>
+""", unsafe_allow_html=True)
 
-run_simulation = st.sidebar.button("▶️ Jalankan Simulasi")
+st.title("🔬 Photosynthesis Virtual Lab – Interactive Simulation")
 
+st.write("Ubah parameter berikut untuk menjalankan simulasi fotosintesis secara virtual.")
 
-# ================================
-# 2. Model Simulasi (Sementara)
-# ================================
-def photosynthesis_model(light, co2, temp, chlorophyll):
+# -------------------------------
+# Layout 2 kolom seperti comphot
+# -------------------------------
+col1, col2 = st.columns(2)
 
-    # Faktor cahaya (kurva asimptotik sederhana)
-    light_factor = (light / (light + 300))
+with col1:
+    AL = st.slider("Light intensity of light phase (AL) in µmol m⁻² s⁻¹",
+                   min_value=50, max_value=900, value=100)
 
-    # Faktor CO₂ (penjenuhan)
-    co2_factor = (co2 / (co2 + 400))
+    duration = st.slider("Test duration in minutes",
+                         min_value=1, max_value=15, value=5)
 
-    # Faktor suhu (kurva optimum)
-    temp_factor = np.exp(-((temp - 28) ** 2) / 50)
+    CtZ = st.slider("Conversion rate to Zeaxanthin (CtZ) in percent of default",
+                    min_value=1, max_value=10000, value=100)
 
-    # Faktor klorofil
-    chl_map = {
-        "Rendah": 0.7,
-        "Sedang": 1.0,
-        "Tinggi": 1.3
-    }
-    chl_factor = chl_map[chlorophyll]
+    dark_phase = st.slider("Length of the dark phase in seconds",
+                           min_value=0, max_value=300, value=30)
 
-    # Hasil akhir (model kombinasi)
-    rate = 50 * light_factor * co2_factor * temp_factor * chl_factor
-    return rate
+with col2:
+    SP_interval = st.slider("Seconds between saturating pulse during light phase",
+                            min_value=5, max_value=150, value=85)
 
+    CtV = st.slider("Conversion rate to Violaxanthin (CtV) in percent of default",
+                    min_value=1, max_value=10000, value=100)
 
-# ================================
-# 3. Ketika Simulasi Dijalankan
-# ================================
-if run_simulation:
-    st.subheader("📊 Hasil Simulasi")
+    SP = st.slider("Light intensity of saturating pulse (SP) in µmol m⁻² s⁻¹",
+                   min_value=0, max_value=10000, value=5000)
 
-    rate = photosynthesis_model(light, co2, temp, chlorophyll)
+# -------------------------------
+# Tombol simulasi + checkbox
+# -------------------------------
+start = st.button("🚀 Start the simulation", use_container_width=True)
+compare = st.checkbox("Compare with the last simulation")
 
-    st.metric(label="Estimasi Laju Fotosintesis (unit arbitrary)", value=f"{rate:.2f}")
+# -------------------------------
+# Placeholder Output
+# -------------------------------
+output = st.empty()
 
-    # Buat grafik kecil untuk menunjukkan efek perubahan
-    df = pd.DataFrame({
-        "Variabel": ["Cahaya", "CO₂", "Suhu", "Klorofil"],
-        "Nilai Normalisasi": [
-            light / 2000,
-            co2 / 2000,
-            temp / 50,
-            {"Rendah": 0.3, "Sedang": 0.6, "Tinggi": 1.0}[chlorophyll]
-        ]
-    })
-    st.bar_chart(df, x="Variabel", y="Nilai Normalisasi")
-
-    st.success("Simulasi selesai dijalankan!")
+if start:
+    output.info("Simulasi sedang berjalan... (model akan ditambahkan)")
 else:
-    st.info("Atur variabel di panel samping dan jalankan simulasi.")
+    output.write("📉 Grafik hasil simulasi akan tampil di sini.")
