@@ -64,15 +64,15 @@ if start:
         "dark_phase": dark_phase,
     }
 
-    # JALANKAN MODEL
-    result = run_simulation(params)
-
-    # Simpan sebagai last simulation
-    if "last_simulation" not in st.session_state:
-        st.session_state.last_simulation = None
-
-    last = st.session_state.last_simulation
-    st.session_state.last_simulation = result
+    # Jalankan model
+result = run_simulation(
+    AL=params["AL"],
+    SP=params["SP"],
+    duration_min=params["duration"],
+    SP_interval_s=params["dark_phase"],
+    CtZ_percent=params["CtZ"],
+    CtV_percent=params["CtV"],
+)
 
     # -----------------------------------------
 # TAMPILKAN HASIL
