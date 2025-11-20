@@ -1,21 +1,5 @@
 import streamlit as st
 
-# DEBUG
-st.write("DEBUG: simulasi.py loaded")
-try:
-    from models.simulation_engine import run_simulation
-    st.write("DEBUG: import simulation_engine OK")
-except Exception as e:
-    st.error(f"DEBUG: import error → {e}")
-
-st.write("DEBUG: simulasi.py loaded")
-
-try:
-    from simulation_engine import run_simulation
-    st.write("DEBUG: import simulation_engine OK")
-except Exception as e:
-    st.error(f"DEBUG: gagal import simulation_engine → {e}")
-
 
 # -----------------------------------------
 # TITLE
