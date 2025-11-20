@@ -91,29 +91,40 @@ if start:
     st.session_state.last_simulation = result
 
     # -----------------------------------------
-    # TAMPILKAN HASIL
-    # -----------------------------------------
-    st.subheader("📊 Grafik Hasil Simulasi")
+# TAMPILKAN HASIL
+# -----------------------------------------
+st.subheader("📊 Grafik Hasil Simulasi")
 
-    import plotly.express as px
+import plotly.express as px
 
-    # contoh grafik: kurva cahaya
-    df_light = result["light_curve"]
+# Light curve
+df_light = result["light_curve_df"]
 
-    fig = px.line(df_light, x="Light", y="Anet", title="Light Response Curve (Current Simulation)")
-    fig.update_traces(line=dict(color="red"))
+fig = px.line(
+    df_light,
+    x="Light",
+    y="Pn",
+    title="Light Response Curve (Current Simulation)"
+)
+fig.update_traces(line=dict(color="red"))
 
-    st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True)
 
-    # BANDINKAN
-    if compare and last is not None:
-        st.subheader("📌 Perbandingan dengan Simulasi Sebelumnya")
+# BANDINKAN
+if compare and last is not None:
+    st.subheader("📌 Perbandingan dengan Simulasi Sebelumnya")
 
-        df_last = last["light_curve"]
-        fig2 = px.line(df_last, x="Light", y="Anet", title="Last Simulation")
-        fig2.update_traces(line=dict(color="blue"))
+    df_last = last["light_curve_df"]
+    fig2 = px.line(
+        df_last,
+        x="Light",
+        y="Pn",
+        title="Last Simulation"
+    )
+    fig2.update_traces(line=dict(color="blue"))
 
-        st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, use_container_width=True)
+
 
 else:
     st.info("Tekan tombol **Start Simulation** untuk menjalankan simulasi.")
