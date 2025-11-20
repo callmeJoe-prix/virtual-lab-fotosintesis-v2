@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.graph_objects as go
 from models.simulation_engine import run_simulation
 
+st.write("DEBUG: simulasi.py loaded")
+
 def run():
     st.title("🔬 Simulasi In Silico Fotosintesis")
     st.write("Atur parameter di panel kiri lalu tekan **Start the simulation**.")
