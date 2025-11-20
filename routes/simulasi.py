@@ -1,14 +1,14 @@
 import streamlit as st
-
+from models.simulation_engine import run_simulation
+import plotly.express as px
 
 # -----------------------------------------
 # TITLE
 # -----------------------------------------
 st.title("🔬 Virtual Lab Fotosintesis – Simulasi Interaktif")
 
-
 # -----------------------------------------
-# CSS (AMAN, TIDAK BREAK LAYOUT)
+# CSS
 # -----------------------------------------
 st.markdown("""
 <style>
@@ -22,9 +22,8 @@ div.stButton > button {
 </style>
 """, unsafe_allow_html=True)
 
-
 # -----------------------------------------
-# SLIDER LAYOUT (SELALU TAMPIL)
+# SLIDER INPUT
 # -----------------------------------------
 col1, col2 = st.columns(2)
 
@@ -40,17 +39,11 @@ with col2:
 
 compare = st.checkbox("Compare with last simulation")
 
-# TOMBOL
+# Tombol mulai
 start = st.button("🚀 Start Simulation", use_container_width=True)
 
 # -----------------------------------------
-# OUTPUT PLACEHOLDER
-# -----------------------------------------
-out = st.empty()
-
-
-# -----------------------------------------
-# SIMULASI BERJALAN NORMAL
+# KETIKA SIMULASI DIMULAI
 # -----------------------------------------
 if start:
     st.write("DEBUG: mulai simulasi")
@@ -64,51 +57,41 @@ if start:
         "dark_phase": dark_phase,
     }
 
-    # Jalankan model
-result = run_simulation(
-    AL=params["AL"],
-    SP=params["SP"],
-    duration_min=params["duration"],
-    SP_interval_s=params["dark_phase"],
-    CtZ_percent=params["CtZ"],
-    CtV_percent=params["CtV"],
-)
+    # Simpan hasil sebelumnya
+    if "last_simulation" not in st.session_state:
+        st.session_state.last_simulation = None
+    last = st.session_state.last_simulation
+
+    # JALANKAN MODEL DENGAN PARAMETER YANG BENAR
+    result = run_simulation(
+        AL=params["AL"],
+        SP=params["SP"],
+        duration_min=params["duration"],
+        SP_interval_s=params["dark_phase"],
+        CtZ_percent=params["CtZ"],
+        CtV_percent=params["CtV"],
+    )
+
+    # Simpan hasil baru
+    st.session_state.last_simulation = result
 
     # -----------------------------------------
-# TAMPILKAN HASIL
-# -----------------------------------------
-st.subheader("📊 Grafik Hasil Simulasi")
+    # TAMPILKAN GRAFIK
+    # -----------------------------------------
+    st.subheader("📊 Grafik Hasil Simulasi")
 
-import plotly.express as px
+    df_light = result["light_curve_df"]
+    fig = px.line(df_light, x="Light", y="Pn", title="Light Response Curve (Current Simulation)")
+    fig.update_traces(line=dict(color="red"))
+    st.plotly_chart(fig, use_container_width=True)
 
-# Light curve
-df_light = result["light_curve_df"]
-
-fig = px.line(
-    df_light,
-    x="Light",
-    y="Pn",
-    title="Light Response Curve (Current Simulation)"
-)
-fig.update_traces(line=dict(color="red"))
-
-st.plotly_chart(fig, use_container_width=True)
-
-# BANDINKAN
-if compare and last is not None:
-    st.subheader("📌 Perbandingan dengan Simulasi Sebelumnya")
-
-    df_last = last["light_curve_df"]
-    fig2 = px.line(
-        df_last,
-        x="Light",
-        y="Pn",
-        title="Last Simulation"
-    )
-    fig2.update_traces(line=dict(color="blue"))
-
-    st.plotly_chart(fig2, use_container_width=True)
-
+    # Perbandingan dengan sebelumnya
+    if compare and last is not None:
+        st.subheader("📌 Perbandingan dengan Simulasi Sebelumnya")
+        df_last = last["light_curve_df"]
+        fig2 = px.line(df_last, x="Light", y="Pn", title="Last Simulation")
+        fig2.update_traces(line=dict(color="blue"))
+        st.plotly_chart(fig2, use_container_width=True)
 
 else:
     st.info("Tekan tombol **Start Simulation** untuk menjalankan simulasi.")
