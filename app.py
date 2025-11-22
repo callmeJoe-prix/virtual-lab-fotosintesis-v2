@@ -16,6 +16,7 @@ pg = st.navigation(
         st.page("routes/survey.py", title="Survey", icon= "❓")
     ]
 )
+"Survey": "routes/survey.py",
 
 # Sidebar
 with st.sidebar:
