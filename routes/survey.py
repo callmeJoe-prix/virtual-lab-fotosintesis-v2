@@ -1,14 +1,43 @@
 import streamlit as st
 
-st.title("📝 Survey Virtual Lab Fotosintesis")
+def show_survey_page():
+    st.title("📋 Survey Pengalaman Belajar")
+    st.markdown("""
+    Selamat datang di halaman **Survey Pengalaman Belajar Virtual Lab Fotosintesis**.  
+    Mohon luangkan waktu sekitar **2–3 menit** untuk mengisi survey ini.
 
-st.write("""
-Silakan isi survey berikut untuk membantu meningkatkan kualitas Virtual Lab.
-Klik tombol di bawah untuk membuka Google Form:
-""")
+    Survey ini bertujuan untuk:
+    - Mengukur pemahaman mahasiswa  
+    - Menilai kemudahan penggunaan Virtual Lab  
+    - Mengetahui pengalaman belajar sebelum & sesudah simulasi  
+    - Mengumpulkan masukan untuk pengembangan lab virtual selanjutnya  
 
-google_form_url = "https://forms.gle/abcd1234efgh5678"   # GANTI DENGAN LINK FORM ANDA
+    Terima kasih atas partisipasinya 🙏
+    """)
+    
+    st.divider()
+    
+    st.subheader("📝 Akses Form Survey")
+    st.markdown("""
+    Klik tombol di bawah untuk membuka form survey resmi:
 
-st.link_button("📤 Buka Survey", google_form_url)
+    👉 **[BUKA FORM SURVEY](https://docs.google.com/forms/d/e/FORM_ID/viewform)**  
+    *(Ganti link di atas setelah kamu membuat Google Form finalnya)*  
+    """)
 
-st.info("Survey akan membuka tab baru di browser Anda.")
+    st.info("Pastikan Anda mengisi survey sampai selesai agar data tersimpan.")
+
+    st.divider()
+
+    st.subheader("📊 Mengapa Survey Ini Penting?")
+    st.markdown("""
+    Data dari survey akan digunakan untuk:
+    - Menilai efektivitas Virtual Lab  
+    - Melakukan perbaikan konten teori  
+    - Menambah fitur baru pada simulasi  
+    - Meningkatkan pengalaman belajar mahasiswa  
+
+    Semua data bersifat **anonim** dan hanya digunakan untuk keperluan akademik.
+    """)
+
+    st.success("Halaman survey siap digunakan ✔")
