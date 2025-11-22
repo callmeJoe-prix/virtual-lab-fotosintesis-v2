@@ -47,63 +47,6 @@ Harmonis & Adaptif → mendukung pembelajaran modern berbasis teknologi
 
 Loyal & Kolaboratif → selaras dengan visi UIN Ar-Raniry dan kebutuhan mahasiswa
 
-⚙️ Instalasi & Menjalankan Aplikasi
-
-Pastikan menggunakan Python 3.11+.
-
-1. Buat dan aktifkan virtual environment
-conda create -n virtuallab python==3.11 pip
-conda activate virtuallab
-
-2. Install seluruh dependensi
-pip install -r requirements.txt
-
-3. Jalankan aplikasi Streamlit
-streamlit run Start.py
-
-📁 Struktur Proyek
-virtual-lab-fotosintesis/
-│
-├── Start.py                 # Halaman utama Streamlit
-├── routes/                  # Folder halaman-halaman modul
-│   ├── teori.py
-│   ├── simulasi.py
-│   ├── kuis.py
-│   ├── survey.py
-│
-├── assets/                  # Gambar, ikon, desain
-├── utils/                   # Fungsi pendukung
-├── requirements.txt
-└── README.md
-
-🧪 Fitur Utama
-1. Teori Fotosintesis
-
-Disajikan dalam bentuk ringkas, runtut, dan dilengkapi gambar.
-
-2. Simulasi Fotosintesis
-
-Slider intensitas cahaya
-
-Grafik laju fotosintesis real-time
-
-Indikator produksi oksigen
-
-Animasi interaktif
-
-3. Kuis Otomatis
-
-Kuis pilihan ganda
-
-Penilaian otomatis
-
-Feedback instan untuk mahasiswa
-
-4. Survei Pengalaman Belajar
-
-Dibuat otomatis via Google Form melalui Apps Script
-
-Mengumpulkan data kepuasan, pemahaman, dan pengalaman mahasiswa
 
 🌐 Teknologi yang Digunakan
 
@@ -132,7 +75,7 @@ Pengembangan kompetensi pedagogik dosen pemula
 👨‍🏫 Pengembang
 
 Dibuat oleh:
-[Nama Anda] – Dosen CPNS, Program Studi [Isi]
+Jamaluddinsyah, M.Si – Dosen CPNS, Program Studi Biologi Fakultas Sains dan Teknologi
 UIN Ar-Raniry Banda Aceh
 
 Sebagai bagian dari:
