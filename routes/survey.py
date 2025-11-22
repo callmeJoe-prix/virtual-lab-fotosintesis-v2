@@ -70,4 +70,4 @@ with col2:
     - Mendukung pembelajaran mandiri dan praktikum digital  
     """)
 
-st.success("Halaman survey siap digunakan ✔")
+st.success("Terima kasih sudah mengisi survey, feedback dari anda sangat penting untuk kesempurnaan Virtual Lab ini")
