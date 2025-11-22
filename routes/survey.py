@@ -34,7 +34,7 @@ st.subheader("📝 Isi Form Survey")
 st.markdown("""
 Klik tombol di bawah untuk membuka form survey resmi:
 
-👉 **[BUKA FORM SURVEY](https://docs.google.com/forms/d/e/1FAIpQLSfwKf8rzoDdPW6FoShNna0HojDM0KqB2R0Pox-XgT7frfp6fg/viewform)**  
+👉 **[BUKA FORM SURVEY](https://forms.gle/cJUKmV7r81WpZAUs8)**  
  
 """)
 
