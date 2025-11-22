@@ -13,7 +13,7 @@ pg = st.navigation(
         st.Page("routes/teori.py", title="Teori Fotosintesis", icon="📘"),
         st.Page("routes/simulasi.py", title="Simulasi Interaktif", icon="🧪"),
         st.Page("routes/kuis.py", title="Kuis", icon="❓")
-        st.page(""routes/survey.py, title="Survey", icon= "❓"),
+        st.page("routes/survey.py", title="Survey", icon= "❓"),
     ]
 )
 
